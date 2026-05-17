@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0b0f1a;
+  color:#fff;
+}
+
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(10,10,20,0.6);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  z-index:1000;
+}
+
+.logo{
+  font-weight:800;
+}
+
+nav a{
+  color:#aaa;
+  margin-left:18px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:#fff;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 8%;
+  background:radial-gradient(circle at top,#1b2550,transparent 60%);
+}
+
+.hero h1{
+  font-size:3.8rem;
+  font-weight:800;
+}
+
+.hero span{
+  color:#6d5efc;
+}
+
+.hero p{
+  margin-top:15px;
+  color:#aaa;
+  max-width:600px;
+  margin-inline:auto;
+  line-height:1.6;
+}
+
+.btns{
+  margin-top:25px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 24px;
+  border-radius:12px;
+  margin:10px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.primary{
+  background:#6d5efc;
+  color:white;
+}
+
+.secondary{
+  border:1px solid #333;
+  color:white;
+}
+
+section{
+  padding:100px 8%;
+}
+
+.title{
+  text-align:center;
+  font-size:2.3rem;
+  margin-bottom:50px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#12182a;
+  padding:20px;
+  border-radius:16px;
+  border:1px solid #1f2740;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#6d5efc;
+}
+
+.project-img{
+  height:150px;
+  background:#1c2338;
+  border-radius:12px;
+  margin-bottom:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#666;
+}
+
+.contact{
+  text-align:center;
+}
+
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:10px;
+  border:1px solid #222;
+  background:#0f1424;
+  color:white;
+}
+
+button{
+  margin-top:15px;
+  padding:12px 20px;
+  border:none;
+  border-radius:10px;
+  background:#6d5efc;
+  color:white;
+  cursor:pointer;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:#666;
+  border-top:1px solid #111;
+}
+
+@media(max-width:768px){
+  .hero h1{font-size:2.5rem;}
+  nav{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="James.png">Website Portfolio Example</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Hi, I'm <span>Carl James Bautista</span></h1>
+    <p>I build modern, responsive, and clean websites for clients and businesses.</p>
+    <div class="btns">
+      <a href="#projects" class="btn primary">View Work</a>
+      <a href="#contact" class="btn secondary">Hire Me</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="title">About Me</h2>
+  <div class="grid">
+    <div class="card">
+      <p>
+        I am a web developer focused on creating clean and modern websites.
+        I specialize in HTML, CSS, JavaScript, and responsive design.
+      </p>
+    </div>
+    <div class="card">
+      <p>Skills: HTML, CSS, JS, Responsive Design, UI Design</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="title">Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="project-img">Project</div>
+      <h3>Portfolio Website</h3>
+      <p>Modern personal portfolio design.</p>
+    </div>
+
+    <div class="card">
+      <div class="project-img">Project</div>
+      <h3>Business Website</h3>
+      <p>Clean landing page for businesses.</p>
+    </div>
+
+    <div class="card">
+      <div class="project-img">Project</div>
+      <h3>E-commerce UI</h3>
+      <p>Simple shopping interface design.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="title">Contact Me</h2>
+  <input placeholder="Your Name" />
+  <input placeholder="Your Email" />
+  <textarea rows="5" placeholder="Message"></textarea>
+  <button>Send</button>
+</section>
+
+<footer>
+  © 2026 My Portfolio. All rights reserved.
+</footer>
+
+</body>
+</html>
